@@ -1,5 +1,7 @@
+use bincode::decode_from_std_read;
+
+use crate::data::{DataHeader, DataPacket};
 use std::{
-    io::{BufRead, BufReader},
     net::{TcpListener, TcpStream},
     thread,
 };
@@ -17,12 +19,17 @@ pub fn start_tcp() {
 }
 
 fn handle_connection(mut stream: TcpStream) {
-    let buf_reader = BufReader::new(&stream);
-    let http_request: Vec<_> = buf_reader
-        .lines()
-        .map(|result| result.unwrap())
-        .take_while(|line| !line.is_empty())
-        .collect();
+    let header: DataHeader = decode_from_std_read(&mut stream, bincode::config::standard())
+        .expect("Did not decode data header!");
 
-    println!("Request: {http_request:#?}");
+    println!("Got header with length {}", header.parts_count);
+
+    let mut parts_read = 0;
+    while parts_read < header.parts_count {
+        let _: DataPacket = decode_from_std_read(&mut stream, bincode::config::standard())
+            .expect("Failed to decode data packet!");
+        parts_read += 1;
+    }
+
+    println!("Done with all parts!");
 }
