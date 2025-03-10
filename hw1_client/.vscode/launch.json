@@ -1,0 +1,18 @@
+{
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "cargo run -p hw1_client",
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/target/debug/hw1_client",
+      "env": {
+        "RUST_BACKTRACE": "short",
+        "RUSTC_TOOLCHAIN": "/Users/alexst/.rustup/toolchains/stable-aarch64-apple-darwin"
+      },
+      "args": [],
+      "sourceMap": {},
+      "sourceLanguages": ["rust"]
+    }
+  ]
+}
