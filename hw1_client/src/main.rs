@@ -47,6 +47,7 @@ fn test_tcp(total_length: u32, package_size: u32) {
             .expect("Failed to encode into TCP stream!");
         messages += 1;
         part += 1;
+        eprintln!("Sent {} parts!", part);
     }
 
     println!("Protocol: TCP, Messages: {}, Bytes: {}", messages, bytes);

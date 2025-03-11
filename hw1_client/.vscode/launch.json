@@ -10,7 +10,7 @@
         "RUST_BACKTRACE": "short",
         "RUSTC_TOOLCHAIN": "/Users/alexst/.rustup/toolchains/stable-aarch64-apple-darwin"
       },
-      "args": [],
+      "args": ["udp", "16834", "small"],
       "sourceMap": {},
       "sourceLanguages": ["rust"]
     }
