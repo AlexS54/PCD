@@ -1,0 +1,9 @@
+    WebCardinal release for bundle-minimal (build-id #80)
+    added serverlessAPI tests to smoke tests suite
+    Update bundle file paths and streamline build process
+    
+    Revised the file paths for the PSK bundles in build and script files, switching from "opendsu-sdk/psknode/bundles" to "opendsu-sdk/builds/output".
+    axiologic-pla/dev#640 update favicon for apihub and apps
+    WebCardinal release for bundle-minimal (build-id #80)
+    WebCardinal release for bundle-minimal (build-id #80)
+    WebCardinal release for bundle-minimal (build-id #80)

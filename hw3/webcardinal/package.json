@@ -1,0 +1,11 @@
+{
+  "name": "webcardinal",
+  "license": "MIT",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node -e \"console.log(require('path').resolve('./../opendsu-sdk/builds/output'))\" | xargs -I {} node ./node_modules/octopus/scripts/buildDSU.js --bundles={}\n"
+  },
+  "dependencies": {
+    "octopus": "git+https://github.com/openDSU/octopus.git"
+  }
+}

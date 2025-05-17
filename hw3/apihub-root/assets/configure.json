@@ -1,0 +1,10 @@
+{
+  "menu-items": [
+    {
+      "href": "dsu-explorer",
+      "background_color": "#FAA368",
+      "icon": "fa-solid fa-atom fa-4x",
+      "label": "DSU Explorer"
+    }
+  ]
+}
